@@ -1,0 +1,25 @@
+﻿@model List<EulerProblem>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Project Euler is a series of challenging mathematical/computer programming problems. These are my solutions for resolving the problems.</p>
+</div>
+
+<div id="main">
+    <ul class="list-group">
+        @foreach (var item in Model)
+        {
+            if (item.Completed)
+            {
+                <li class="list-group-item list-group-item-success">
+                    <h2>@item.Title</h2>
+                    <p>@item.Description</p>
+                    <p>The result is <strong>@item.GetResult()</strong> and took @item.TimeTaken.TotalMilliseconds milliseconds</p>
+                </li>
+            }
+        }
+    </ul>
+</div>
