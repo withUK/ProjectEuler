@@ -1,6 +1,6 @@
 ﻿@model List<EulerProblem>
 @{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Home";
 }
 
 <div class="text-center">
@@ -19,6 +19,7 @@
                     <p>@item.Description</p>
                     <p>The result is <strong>@item.GetResult()</strong> and took @item.TimeTaken.TotalMilliseconds milliseconds</p>
                 </li>
+                <br />
             }
         }
     </ul>
