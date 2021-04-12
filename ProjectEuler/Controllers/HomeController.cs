@@ -23,6 +23,7 @@ namespace ProjectEuler.Controllers
             List<EulerProblem> eulerProblems = new List<EulerProblem>();
             eulerProblems.Add(new Problem0001());
             eulerProblems.Add(new Problem0002());
+            eulerProblems.Add(new Problem0003());
             return View(eulerProblems);
         }
 
